@@ -24,6 +24,9 @@ A chrome extension that shifts the pitch of HTML5 videos. Cadenza is just an *em
 
 ##### Pitch Shifter by Foxdog Studios
 
+Github Link:  
+[https://github.com/foxdog-studios/pitch-shifter-chrome-extension](https://github.com/foxdog-studios/pitch-shifter-chrome-extension)
+
 A chrome extension that shifts the pitch of HTML5 videos, get it
 [here](https://chrome.google.com/webstore/detail/pitch-shifter-html5-video/mpmkclglcbkjchakihfpblainfncennj?hl=en)
 
