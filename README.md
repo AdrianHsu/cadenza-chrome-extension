@@ -4,7 +4,7 @@
 
 ![icon](icon-128.png)
 
-> A chrome extension that can shifts the pitch & modified the speed of HTML5 videos. Cadenza is an embedded pitch shifter on youtube.
+> A chrome extension that can shifts the pitch & modifies the speed of HTML5 videos. Cadenza is an embedded pitch shifter on youtube.
 
 
 
