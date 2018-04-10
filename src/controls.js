@@ -13,11 +13,11 @@ function init() {
   var pitch = document.getElementById("pitch");
   var pitchValue = document.getElementById("pitch-value");
   var pitchShiftTypeSelect = document.getElementById("pitch-shift-type");
-  // var pitchReset = document.getElementById("pitch-reset");
+  var pitchReset = document.getElementById("pitch-reset");
 
   var playbackRate = document.getElementById("playback-rate");
   var playbackRateValue = document.getElementById("playback-rate-value");
-  // var playbackRateReset = document.getElementById("playback-rate-reset");
+  var playbackRateReset = document.getElementById("playback-rate-reset");
 
   function setPitchValue(_pitchValue) {
     pitch.value = _pitchValue;
@@ -53,6 +53,7 @@ function init() {
         setPitchShiftTypeSmooth();
       }
     }
+
     if (values.pitch !== undefined && values.pitch !== null) {
       setPitchValue(values.pitch);
     }
@@ -75,6 +76,7 @@ function init() {
   pitch.addEventListener(
     "input",
     function(event) {
+      console.log(pitch.value);
       sendMessageToActiveTab({ pitch: pitch.value });
       setPitchValue(pitch.value);
     },
@@ -98,33 +100,33 @@ function init() {
     false
   );
 
-  // pitchReset.addEventListener(
-  //   "click",
-  //   function(event) {
-  //     sendMessageToActiveTab({ pitch: 0 });
-  //     setPitchValue(0);
-  //   },
-  //   false
-  // );
+  pitchReset.addEventListener(
+    "click",
+    function(event) {
+      sendMessageToActiveTab({ pitch: 0 });
+      setPitchValue(0);
+    },
+    false
+  );
 
   playbackRate.addEventListener(
     "input",
     function(event) {
-      console.log("???");
+      console.log([playbackRate.value]);
       sendMessageToActiveTab({ playbackRate: playbackRate.value });
       setPlaybackRate(playbackRate.value);
     },
     false
   );
 
-  // playbackRateReset.addEventListener(
-  //   "click",
-  //   function(event) {
-  //     sendMessageToActiveTab({ playbackRate: 1 });
-  //     setPlaybackRate(1);
-  //   },
-  //   false
-  // );
+  playbackRateReset.addEventListener(
+    "click",
+    function(event) {
+      sendMessageToActiveTab({ playbackRate: 1 });
+      setPlaybackRate(1);
+    },
+    false
+  );
 }
 
 var readyStateCheckInterval = setInterval(function() {

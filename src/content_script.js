@@ -113,8 +113,6 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
     response.transpose = transpose;
     sendResponse(response);
   }
-  console.log(request);
-
   if (request.enabled !== undefined && request.enabled !== null) {
     if (request.enabled) {
       initVideoObservers();
