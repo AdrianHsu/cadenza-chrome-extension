@@ -76,7 +76,7 @@ function init() {
   pitch.addEventListener(
     "input",
     function(event) {
-      console.log(pitch.value);
+      //console.log(pitch.value);
       sendMessageToActiveTab({ pitch: pitch.value });
       setPitchValue(pitch.value);
     },
@@ -112,7 +112,7 @@ function init() {
   playbackRate.addEventListener(
     "input",
     function(event) {
-      console.log([playbackRate.value]);
+      //console.log([playbackRate.value]);
       sendMessageToActiveTab({ playbackRate: playbackRate.value });
       setPlaybackRate(playbackRate.value);
     },

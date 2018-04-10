@@ -166,7 +166,7 @@ var videoAvailable = setInterval(function() {
   videoControls = document.getElementsByClassName(
     "style-scope ytd-video-primary-info-renderer"
   )[0];
-  console.log(videoControls);
+  //console.log(videoControls);
   if (
     document.location.search.indexOf("?v=") >= 0 &&
     video != undefined &&
